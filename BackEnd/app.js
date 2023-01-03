@@ -43,7 +43,7 @@ app.get("/users", (req, res) => {
 
 app.get("/drugs", (req, res) => {
   let sql =
-    "CREATE TABLE drugs (id int AUTO_INCREMENT PRIMARY KEY, name varchar(100), price varchar(100),image varchar(100), description varchar(255),category varchar(100)), expirationDate date NOT NULL";
+    "CREATE TABLE drugs (id int AUTO_INCREMENT PRIMARY KEY, name varchar(100), price varchar(100),image varchar(100), description varchar(255),category varchar(100),expirationDate DATE)";
   db.query(sql, (err, result) => {
     if (err) throw err;
     console.log(result);
